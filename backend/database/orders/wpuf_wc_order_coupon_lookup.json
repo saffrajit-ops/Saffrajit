@@ -1,0 +1,16 @@
+[
+{"type":"header","version":"5.2.1","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"canagold"},
+{"type":"table","name":"wpuf_wc_order_coupon_lookup","database":"canagold","data":
+[
+{"order_id":"2184","coupon_id":"2182","date_created":"2020-01-28 11:18:00","discount_amount":"99"},
+{"order_id":"518","coupon_id":"517","date_created":"2019-03-26 10:49:52","discount_amount":"20"},
+{"order_id":"812","coupon_id":"811","date_created":"2019-09-22 16:53:04","discount_amount":"159.8"},
+{"order_id":"814","coupon_id":"811","date_created":"2019-09-22 18:50:43","discount_amount":"79.8"},
+{"order_id":"815","coupon_id":"811","date_created":"2019-09-22 20:24:40","discount_amount":"103.8"},
+{"order_id":"818","coupon_id":"811","date_created":"2019-09-24 16:36:37","discount_amount":"159.6"},
+{"order_id":"4931","coupon_id":"2182","date_created":"2020-04-06 19:33:23","discount_amount":"118.8"},
+{"order_id":"4932","coupon_id":"2182","date_created":"2020-04-06 20:08:33","discount_amount":"118.8"}
+]
+}
+]
