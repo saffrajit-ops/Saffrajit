@@ -42,9 +42,31 @@ app.use(helmet({
     },
   },
 }));
-// Allow from all front-end URLs and localhost for testing temporarily
+
+const allowedOrigins = [
+  'https://saffrajit-jdyq.vercel.app',
+  'https://saffrajit-9j72.vercel.app',
+  'http://localhost:3000'
+];
+
+function corsOrigin(origin, callback) {
+  if (!origin) return callback(null, true);
+  if (allowedOrigins.includes(origin)) return callback(null, true);
+  return callback(new Error('Origin not allowed by CORS'), false);
+}
+
 app.use(cors({
-  origin: (origin, callback) => callback(null, true),
+  origin: corsOrigin,
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
+  exposedHeaders: ['Set-Cookie'],
+  maxAge: 600,
+  optionsSuccessStatus: 204
+}));
+
+app.options(/.*/, cors({
+  origin: corsOrigin,
   credentials: true
 }));
 
